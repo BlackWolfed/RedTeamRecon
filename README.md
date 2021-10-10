@@ -145,7 +145,7 @@ $  python3 do-search.py
 
 ## 10.  Happy Hacking 🔥
 
-============================================================================================
+========================================================================================
 # ⚡ URLs For Tools
 
 - wappalyzer: https://www.wappalyzer.com
@@ -176,7 +176,8 @@ $  python3 do-search.py
 - GHDB: https://www.exploit-db.com/google-hacking-database
 
 
-==============================================
+========================================================================================
+
 # Useful Links
 - https://www.triaxiomsecurity.com/our-external-penetration-testing-methodology/ **External Penetration Testing Methodology**
 - https://www.triaxiomsecurity.com/our-internal-penetration-testing-methodology/  **Internal Penetration Testing Methodology**
@@ -189,3 +190,4 @@ $  python3 do-search.py
 [Extenstion]: https://www.wappalyzer.com/
 [Linkedin]: https://www.linkedin.com/in/mostafa-bn-tamam-96308216a/
 [twitter]: https://twitter.com/BlackWo50331384
+[shodan.io]:shodan.io
