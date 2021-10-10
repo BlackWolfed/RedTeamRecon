@@ -190,4 +190,7 @@ $  python3 do-search.py
 [Extenstion]: https://www.wappalyzer.com/
 [Linkedin]: https://www.linkedin.com/in/mostafa-bn-tamam-96308216a/
 [twitter]: https://twitter.com/BlackWo50331384
-[shodan.io]:shodan.io
+[shodan.io]: shodan.io
+[censys.io]: censys.io
+[ipinfo.io]: ipinfo.io
+[crt.sh]: crt.sh
