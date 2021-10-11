@@ -9,7 +9,7 @@
 <br>
 
 # Description
- 🔭 This is a Recon & Inoformation Garhering Methodology In Bug Hunting Process
+ 🔭 This is a Recon & Information Gathering Methodology In Bug Hunting Process
 
 ![Recon](Recon.png)
 
@@ -22,11 +22,11 @@
 - What is CMS [Website]
 4. Finally in this step is learning tech you don't have, for example how to perform SQL injection without learning what is SQL query is, you should learn every service introduced by the website 
 
-# 🔭 Recon & Info Gathering 
-## 1. Perform Subdomain enumeration to your target , in my case gitlab.com is my target
+# 🔭 Recon & Info Gathering
+## 1. Perform Subdomain enumeration to your target, in my case gitlab.com is my target
 
 ### Sublist3r
- This is a great tool to enumerate subdomains of websites using OSINT using many search engines such as Google, Yahoo, Bing, Baidu and Ask.
+ This is a great tool to enumerate subdomains of websites using OSINT using many search engines such as Google, Yahoo, Bing, Baidu, and Ask.
  ```
 $ python3 sublist3r.py -d gitlab.com -o /root/Desktop/subdomain
 ```
@@ -43,7 +43,7 @@ DMitry (Deepmagic Information Gathering Tool) is a UNIX/(GNU)Linux Command Line 
 $ dmitry -wnse gitlab.com -o /root/Desktop/dmitry 
 ```
 ### VirusTotal
-Also you can check virustotal website to get more information to your target and get more subdomain details
+Also, you can check virustotal website to get more information about your target and get more subdomain details
 
 
 ## 2. Check IPs used for your target by [shodan.io], [censys.io], [ipinfo.io]
@@ -54,7 +54,7 @@ Also you can check virustotal website to get more information to your target and
 $ nslookup gitlab.com 
 ```
 
-## 3. Check SSL/TLS certfication [crt.sh], [censys.io]
+## 3. Check SSL/TLS certfication by [crt.sh], [censys.io]
 ### sslscan
 sslscan is a great tool to enumeration of server signature algorithms, scanSSLv2 and SSLv3 protocol 
 ```
@@ -63,9 +63,9 @@ $ sslscan  gitlab.com:80:6061 > /root/Desktop/sslscan.txt
 $ sslscan  gitlab.com:80:443 > /root/Desktop/sslscan.txt
 ```
 
-## 4. Check open/closed/filtered ports & DNS record & OS version by : 
+## 4. Check open/closed/filtered ports & DNS record & OS version by 
 ### nmap 
-If you don't know about nmap close this methodology and go to your bed
+If you don't know about Nmap close this methodology and go to your bed
 ```
 $ nmap -sC -sV -p- -A -oN /root/Desktop/nmap gitlab.com
 
@@ -81,14 +81,14 @@ RustScan is a modern take on the port scanner. Sleek & fast. All while providing
 $ rustscan -T 1500 -b 500 13.58.194.87 -A -sC 
 ```
 ### nikto
-Nikto is a web server scanner to get some inforamation may be useful for you
+Nikto is a web server scanner to get some information that may be useful for you
 ```
 $ nikto -h gitlab.com 
 ```
-## 5. Bruteforce directory to get more possible API endpoint don't forget follow this rule **more paths = more files, parameters -> more vulnerabilty** 
+## 5. Bruteforce directory to get more possible API endpoint don't forget to follow this rule **more paths = more files, parameters -> more vulnerability** 
 
 ### Gobuster
-Gobuster is a tool used to brute-force: URIs (directories and files) in web sites, DNS subdomains (with wildcard support), Virtual Host names on target web servers.
+Gobuster is a tool used to brute-force: URIs (directories and files) in websites, DNS subdomains (with wildcard support), Virtual Host names on target web servers.
 
 ```
 $ gobuster dir -u https://gitlab.com -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -o /root/Desktop/endpoint -x php,txt,js
@@ -100,7 +100,7 @@ This tool is great, i usually use it to search paths,links
 $ cat EndJS.txt|xargs -n2 -I@ bash -c "echo -e '\n[URL]: @\n'; python3 linkfinder.py -i @ -o cli" >> Endpoint.txt  
 ```
 ### TheHarvester
-Theharvester is a tool for gathering e-mail accounts and subdomain names from public sources
+TheHarvester is a tool for gathering e-mail accounts and subdomain names from public sources
 ```
 $ theharvester -d gitlab.com -l 500 -b google 
 ```
@@ -120,7 +120,7 @@ HTTPScreenshot is a tool for grabbing screenshots and HTML of large numbers of w
 $ ./httpscreenshot.py -i \<gnmapFile\> -p -w 40 -a -vH
 ```
 
-## 7. Using recon-ng tool to enumerate and get more information about target
+## 7. Using a recon-ng tool to enumerate and get more information about target
 ### recon-ng
 Recon-ng is a reconnaissance tool with an interface similar to Metasploit. Running recon-ng from the command line, you enter a shell like environment where you can configure options, perform recon and output results to different report types.
 - Check this article to know about this tool : https://hackertarget.com/recon-ng-tutorial/
@@ -134,7 +134,7 @@ $ python3 JSFinder.py -u https://gitlab.com -d -j -ou /root/Desktop/Endpoint
 ### gau
 This tool is great, i usually use it to search for as many javascript files as possible, many companies host their files on third parties, this thing is very for important for a bughunter because then really enumerate a lot js files!
 ```
-$  gau paypalobjects.com |grep -iE '\.js'|grep -ivE '\.json'|sort -u  >> paypalJS.txt
+$  gau gitlab.com |grep -iE '\.js'|grep -ivE '\.json'|sort -u  >> GitLabJS.txt
 ```
 ## 9. Check Google dorks and Github resource
 ### do-search
@@ -142,7 +142,8 @@ This is a tool by using google dorks for advanced searching in google and other 
 ```
 $  python3 do-search.py 
 ```
-
+### GHDB
+Google Dork Hacking Databases --> Check the link below 👇
 ## 10.  Happy Hacking 🔥
 
 ========================================================================================
