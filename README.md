@@ -45,6 +45,9 @@ $ dmitry -wnse gitlab.com -o /root/Desktop/dmitry
 ### VirusTotal
 Also, you can check virustotal website to get more information about your target and get more subdomain details
 
+### httpstatus
+After you get all subdomains we need to check this domain (HTTP status)  can check HTTP response status codes to indicate whether a specific HTTP request has been successfully completed or  Redirection messages  -  Client error responses -  Server error responses 
+
 
 ## 2. Check IPs used for your target by [shodan.io], [censys.io], [ipinfo.io]
 
