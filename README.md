@@ -112,6 +112,16 @@ same thing in gobuster
 ```
 $ dirb https://gitlab.com -X php,js,txt 
 ```
+### ffuf
+ Fuzz Faster U Fool
+```
+$  ffuf -c -ic -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -u 'https://gitlab.com/.FUZZ' -fc 403 -e .txt,.html
+```
+### waybackurls
+fetch known URLs from the Wayback Machine for *.domain and output them on stdout.
+```
+$ cat domains.txt | waybackurls > urls
+```
 ### Seclist
 It's a collection of multiple types of lists used during security assessments, collected in one place. List types include usernames, passwords, URLs, sensitive data patterns, fuzzing payloads, web shells, and many more. 
 
@@ -158,6 +168,7 @@ Google Dork Hacking Databases --> Check the link below 👇
 - Subfinder: https://github.com/projectdiscovery/subfinder
 - dmitry: https://github.com/jaygreig86/dmitry
 - VirusTotal: https://www.virustotal.com/gui/home/search
+- httpstatus: https://httpstatus.io
 - nslookup: --> apt install dnsutils
 - shodan.io
 - censys.io
@@ -171,6 +182,8 @@ Google Dork Hacking Databases --> Check the link below 👇
 - LinkFinder: https://github.com/GerbenJavado/LinkFinder
 - TheHarvester: https://github.com/laramies/theHarvester
 - dirb: https://github.com/v0re/dirb
+- ffuf: https://github.com/ffuf/ffuf
+- waybackurls: https://github.com/tomnomnom/waybackurls
 - Seclist: https://github.com/danielmiessler/SecLists
 - HttpScreenShot: https://github.com/breenmachine/httpscreenshot
 - recon-ng: https://github.com/lanmaster53/recon-ng
